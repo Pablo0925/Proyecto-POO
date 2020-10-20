@@ -293,8 +293,8 @@ public class UNIDADES_DE_LONGITUD extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInformacionActionPerformed
-        INFO_UV IUV = new INFO_UV();
-        IUV.setVisible(true);
+        INFO_UL IUL = new INFO_UL();
+        IUL.setVisible(true);
     }//GEN-LAST:event_BtnInformacionActionPerformed
 
     private void BtnRegresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegresoActionPerformed

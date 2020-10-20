@@ -20,28 +20,29 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
         BtnInformacion = new javax.swing.JButton();
         BtnRegreso = new javax.swing.JButton();
         BtnSalir = new javax.swing.JButton();
-        Num = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        Numero = new javax.swing.JTextField();
+        Transformar = new javax.swing.JComboBox<>();
+        Miligramo = new javax.swing.JTextField();
+        Centigramo = new javax.swing.JTextField();
+        Decigramo = new javax.swing.JTextField();
+        Gramo = new javax.swing.JTextField();
+        Hectogramo = new javax.swing.JTextField();
+        Decagramo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        Kilogramo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        Tonelada = new javax.swing.JTextField();
+        Miriagramo = new javax.swing.JTextField();
+        Quintal = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        BtnTransformar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,24 +103,24 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
             }
         });
 
-        Num.setText("0");
-        Num.addActionListener(new java.awt.event.ActionListener() {
+        Numero.setText("0");
+        Numero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumActionPerformed(evt);
+                NumeroActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Miligramo", "Centigramo", "Decigramo", "Gramo", "Decagramo", "Hectogramo", "Kilogramo", "Miriagramo", "Quital", "Tonelada" }));
+        Transformar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Miligramo", "Centigramo", "Decigramo", "Gramo", "Decagramo", "Hectogramo", "Kilogramo", "Miriagramo", "Quital", "Tonelada" }));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Miligramo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                MiligramoActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Decigramo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                DecigramoActionPerformed(evt);
             }
         });
 
@@ -163,6 +164,13 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Miriagramo");
 
+        BtnTransformar.setText("Tranformar");
+        BtnTransformar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTransformarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -171,14 +179,14 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Miligramo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Gramo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField3)
-                                .addComponent(jTextField2)))))
+                                .addComponent(Decigramo)
+                                .addComponent(Centigramo)))))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,10 +199,10 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Miriagramo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Kilogramo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Quintal, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tonelada, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,13 +214,10 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
                 .addGap(84, 84, 84)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Num, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Hectogramo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(BtnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(81, 81, 81)
@@ -224,47 +229,54 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
                                 .addContainerGap())
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addComponent(Transformar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BtnTransformar)
+                            .addComponent(Decagramo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Num, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
+                    .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Transformar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(BtnTransformar)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Kilogramo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                    .addComponent(Miligramo, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
+                    .addComponent(Centigramo)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                        .addComponent(Miriagramo, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Decigramo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Quintal, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(Gramo, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Tonelada, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Decagramo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -278,7 +290,7 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hectogramo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 92, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -303,8 +315,8 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInformacionActionPerformed
-        INFO_UV IUV = new INFO_UV();
-        IUV.setVisible(true);
+        INFO_UM IUM = new INFO_UM();
+        IUM.setVisible(true);
     }//GEN-LAST:event_BtnInformacionActionPerformed
 
     private void BtnRegresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegresoActionPerformed
@@ -317,22 +329,157 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BtnSalirActionPerformed
 
-    private void NumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumActionPerformed
+    private void NumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NumActionPerformed
+    }//GEN-LAST:event_NumeroActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void MiligramoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiligramoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_MiligramoActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void DecigramoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DecigramoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_DecigramoActionPerformed
+
+    private void BtnTransformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTransformarActionPerformed
+        double Num = Double.parseDouble(Numero.getText());
+        int op = Transformar.getSelectedIndex();
+            
+            if(op == 0){
+            Miligramo.setText(String.valueOf(Num));
+            Centigramo.setText(String.valueOf(Num/10));
+            Decigramo.setText(String.valueOf(Num/100));
+            Gramo.setText(String.valueOf(Num/1000));
+            Decagramo.setText(String.valueOf(Num/10000));
+            Hectogramo.setText(String.valueOf(Num/100000));
+            Kilogramo.setText(String.valueOf(Num/1000000));
+            Miriagramo.setText(String.valueOf(Num/10000000));
+            Quintal.setText(String.valueOf(Num/100000000));
+            Tonelada.setText(String.valueOf(Num/1000000000));
+        }else{
+            if (op==1){
+            Miligramo.setText(String.valueOf(Num*10));
+            Centigramo.setText(String.valueOf(Num));
+            Decigramo.setText(String.valueOf(Num/10));
+            Gramo.setText(String.valueOf(Num/100));
+            Decagramo.setText(String.valueOf(Num/1000));
+            Hectogramo.setText(String.valueOf(Num/10000));
+            Kilogramo.setText(String.valueOf(Num/100000));
+            Miriagramo.setText(String.valueOf(Num/1000000));
+            Quintal.setText(String.valueOf(Num/10000000));
+            Tonelada.setText(String.valueOf(Num/100000000));
+            }else{
+            if(op==2){
+            Miligramo.setText(String.valueOf(Num*100));
+            Centigramo.setText(String.valueOf(Num*10));
+            Decigramo.setText(String.valueOf(Num));
+            Gramo.setText(String.valueOf(Num/10));
+            Decagramo.setText(String.valueOf(Num/100));
+            Hectogramo.setText(String.valueOf(Num/1000));
+            Kilogramo.setText(String.valueOf(Num/10000));
+            Miriagramo.setText(String.valueOf(Num/100000));
+            Quintal.setText(String.valueOf(Num/1000000));
+            Tonelada.setText(String.valueOf(Num/10000000));
+            }else{
+            if(op==3){
+            Miligramo.setText(String.valueOf(Num*1000));
+            Centigramo.setText(String.valueOf(Num*100));
+            Decigramo.setText(String.valueOf(Num*10));
+            Gramo.setText(String.valueOf(Num));
+            Decagramo.setText(String.valueOf(Num/10));
+            Hectogramo.setText(String.valueOf(Num/100));
+            Kilogramo.setText(String.valueOf(Num/1000));
+            Miriagramo.setText(String.valueOf(Num/10000));
+            Quintal.setText(String.valueOf(Num/100000));
+            Tonelada.setText(String.valueOf(Num/1000000));
+            }else{
+            }if(op==4){
+            Miligramo.setText(String.valueOf(Num*10000));
+            Centigramo.setText(String.valueOf(Num*1000));
+            Decigramo.setText(String.valueOf(Num*100));
+            Gramo.setText(String.valueOf(Num*10));
+            Decagramo.setText(String.valueOf(Num));
+            Hectogramo.setText(String.valueOf(Num/10));
+            Kilogramo.setText(String.valueOf(Num/100));
+            Miriagramo.setText(String.valueOf(Num/1000));
+            Quintal.setText(String.valueOf(Num/10000));
+            Tonelada.setText(String.valueOf(Num/100000));  
+            }else{
+            if(op==5){
+            Miligramo.setText(String.valueOf(Num*100000));
+            Centigramo.setText(String.valueOf(Num*10000));
+            Decigramo.setText(String.valueOf(Num*1000));
+            Gramo.setText(String.valueOf(Num*100));
+            Decagramo.setText(String.valueOf(Num*10));
+            Hectogramo.setText(String.valueOf(Num));
+            Kilogramo.setText(String.valueOf(Num/10));
+            Miriagramo.setText(String.valueOf(Num/100));
+            Quintal.setText(String.valueOf(Num/1000));
+            Tonelada.setText(String.valueOf(Num/10000));
+            }else{
+            if(op==6){
+            Miligramo.setText(String.valueOf(Num*1000000));
+            Centigramo.setText(String.valueOf(Num*100000));
+            Decigramo.setText(String.valueOf(Num*10000));
+            Gramo.setText(String.valueOf(Num*1000));
+            Decagramo.setText(String.valueOf(Num*100));
+            Hectogramo.setText(String.valueOf(Num*10));
+            Kilogramo.setText(String.valueOf(Num));
+            Miriagramo.setText(String.valueOf(Num/10));
+            Quintal.setText(String.valueOf(Num/100));
+            Tonelada.setText(String.valueOf(Num/1000));
+            }else{
+            if(op==7){
+            Miligramo.setText(String.valueOf(Num*10000000));
+            Centigramo.setText(String.valueOf(Num*1000000));
+            Decigramo.setText(String.valueOf(Num*100000));
+            Gramo.setText(String.valueOf(Num*10000));
+            Decagramo.setText(String.valueOf(Num*1000));
+            Hectogramo.setText(String.valueOf(Num*100));
+            Kilogramo.setText(String.valueOf(Num*10));
+            Miriagramo.setText(String.valueOf(Num));
+            Quintal.setText(String.valueOf(Num/10));
+            Tonelada.setText(String.valueOf(Num/100));
+            }else{
+            if(op==8){
+            Miligramo.setText(String.valueOf(Num*100000000));
+            Centigramo.setText(String.valueOf(Num*10000000));
+            Decigramo.setText(String.valueOf(Num*1000000));
+            Gramo.setText(String.valueOf(Num*100000));
+            Decagramo.setText(String.valueOf(Num*10000));
+            Hectogramo.setText(String.valueOf(Num*1000));
+            Kilogramo.setText(String.valueOf(Num*100));
+            Miriagramo.setText(String.valueOf(Num*10));
+            Quintal.setText(String.valueOf(Num));
+            Tonelada.setText(String.valueOf(Num/10));
+            }else{
+            if(op==9){
+            Miligramo.setText(String.valueOf(Num*1000000000));
+            Centigramo.setText(String.valueOf(Num*100000000));
+            Decigramo.setText(String.valueOf(Num*10000000));
+            Gramo.setText(String.valueOf(Num*1000000));
+            Decagramo.setText(String.valueOf(Num*100000));
+            Hectogramo.setText(String.valueOf(Num*10000));
+            Kilogramo.setText(String.valueOf(Num*1000));
+            Miriagramo.setText(String.valueOf(Num*100));
+            Quintal.setText(String.valueOf(Num*10));
+            Tonelada.setText(String.valueOf(Num));
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            }
+            
+    }//GEN-LAST:event_BtnTransformarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]){
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -368,8 +515,19 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
     private javax.swing.JButton BtnInformacion;
     private javax.swing.JButton BtnRegreso;
     private javax.swing.JButton BtnSalir;
-    private javax.swing.JTextField Num;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton BtnTransformar;
+    private javax.swing.JTextField Centigramo;
+    private javax.swing.JTextField Decagramo;
+    private javax.swing.JTextField Decigramo;
+    private javax.swing.JTextField Gramo;
+    private javax.swing.JTextField Hectogramo;
+    private javax.swing.JTextField Kilogramo;
+    private javax.swing.JTextField Miligramo;
+    private javax.swing.JTextField Miriagramo;
+    private javax.swing.JTextField Numero;
+    private javax.swing.JTextField Quintal;
+    private javax.swing.JTextField Tonelada;
+    private javax.swing.JComboBox<String> Transformar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -384,15 +542,5 @@ public class UNIDADES_MASA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

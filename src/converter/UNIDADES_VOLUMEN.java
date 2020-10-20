@@ -19,22 +19,23 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
         BtnInformacion = new javax.swing.JButton();
         BtnRegreso = new javax.swing.JButton();
         BtnSalir = new javax.swing.JButton();
-        Num = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        Numero = new javax.swing.JTextField();
+        Proceso = new javax.swing.JComboBox<>();
+        Mililitro = new javax.swing.JTextField();
+        Centilitro = new javax.swing.JTextField();
+        Decilitro = new javax.swing.JTextField();
+        Litro = new javax.swing.JTextField();
+        Hectolitro = new javax.swing.JTextField();
+        Decalitro = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        Kilolitro = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        BtnTranformar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,24 +96,24 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
             }
         });
 
-        Num.setText("0");
-        Num.addActionListener(new java.awt.event.ActionListener() {
+        Numero.setText("0");
+        Numero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumActionPerformed(evt);
+                NumeroActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mililitro", "Centilitro", "Decilitro", "Litro", "Decalitro", "Hectolitro", "Kilolitro" }));
+        Proceso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mililitro", "Centilitro", "Decilitro", "Litro", "Decalitro", "Hectolitro", "Kilolitro" }));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Mililitro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                MililitroActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Decilitro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                DecilitroActionPerformed(evt);
             }
         });
 
@@ -144,6 +145,13 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Kilolitro");
 
+        BtnTranformar.setText("Transformar");
+        BtnTranformar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTranformarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -152,14 +160,14 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Mililitro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Litro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField3)
-                                .addComponent(jTextField2)))))
+                                .addComponent(Decilitro)
+                                .addComponent(Centilitro)))))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,7 +179,7 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Kilolitro, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -179,13 +187,10 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
                 .addGap(84, 84, 84)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Num, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Hectolitro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(BtnInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(81, 81, 81)
@@ -197,38 +202,45 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
                                 .addContainerGap())
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addComponent(Proceso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BtnTranformar)
+                            .addComponent(Decalitro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Num, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
+                    .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Proceso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnTranformar)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Kilolitro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1))
+                    .addComponent(Mililitro))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(jTextField2))
+                    .addComponent(Centilitro))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Decilitro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(jTextField4))
+                    .addComponent(Litro))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Decalitro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -242,7 +254,7 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hectolitro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 105, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -281,17 +293,91 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
         IUV.setVisible(true);
     }//GEN-LAST:event_BtnInformacionActionPerformed
 
-    private void NumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumActionPerformed
+    private void NumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NumActionPerformed
+    }//GEN-LAST:event_NumeroActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void DecilitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DecilitroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_DecilitroActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void MililitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MililitroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_MililitroActionPerformed
+
+    private void BtnTranformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTranformarActionPerformed
+        double Num = Double.parseDouble(Numero.getText());
+        int op = Proceso.getSelectedIndex();
+            
+            if(op == 0){
+            Mililitro.setText(String.valueOf(Num));
+            Centilitro.setText(String.valueOf(Num/10));
+            Decilitro.setText(String.valueOf(Num/100));
+            Litro.setText(String.valueOf(Num/1000));
+            Decalitro.setText(String.valueOf(Num/10000));
+            Hectolitro.setText(String.valueOf(Num/100000));
+            Kilolitro.setText(String.valueOf(Num/1000000));
+        }else{
+            }if (op==1){
+            Mililitro.setText(String.valueOf(Num*10));
+            Centilitro.setText(String.valueOf(Num));
+            Decilitro.setText(String.valueOf(Num/10));
+            Litro.setText(String.valueOf(Num/100));
+            Decalitro.setText(String.valueOf(Num/1000));
+            Hectolitro.setText(String.valueOf(Num/10000));
+            Kilolitro.setText(String.valueOf(Num/100000));
+            }else{
+            if(op==2){
+            Mililitro.setText(String.valueOf(Num*100));
+            Centilitro.setText(String.valueOf(Num*10));
+            Decilitro.setText(String.valueOf(Num));
+            Litro.setText(String.valueOf(Num/10));
+            Decalitro.setText(String.valueOf(Num/100));
+            Hectolitro.setText(String.valueOf(Num/1000));
+            Kilolitro.setText(String.valueOf(Num/10000));
+            }else{
+            if(op==3){
+            Mililitro.setText(String.valueOf(Num*1000));
+            Centilitro.setText(String.valueOf(Num*100));
+            Decilitro.setText(String.valueOf(Num*10));
+            Litro.setText(String.valueOf(Num));
+            Decalitro.setText(String.valueOf(Num/10));
+            Hectolitro.setText(String.valueOf(Num/100));
+            Kilolitro.setText(String.valueOf(Num/1000));
+            }else{
+            if(op==4){
+            Mililitro.setText(String.valueOf(Num*10000));
+            Centilitro.setText(String.valueOf(Num*1000));
+            Decilitro.setText(String.valueOf(Num*100));
+            Litro.setText(String.valueOf(Num*10));
+            Decalitro.setText(String.valueOf(Num));
+            Hectolitro.setText(String.valueOf(Num/10));
+            Kilolitro.setText(String.valueOf(Num/100));
+            }else{
+            if(op==5){
+            Mililitro.setText(String.valueOf(Num*100000));
+            Centilitro.setText(String.valueOf(Num*10000));
+            Decilitro.setText(String.valueOf(Num*1000));
+            Litro.setText(String.valueOf(Num*100));
+            Decalitro.setText(String.valueOf(Num*10));
+            Hectolitro.setText(String.valueOf(Num));
+            Kilolitro.setText(String.valueOf(Num/10));
+            }else{
+            if(op==6){
+            Mililitro.setText(String.valueOf(Num*1000000));
+            Centilitro.setText(String.valueOf(Num*100000));
+            Decilitro.setText(String.valueOf(Num*10000));
+            Litro.setText(String.valueOf(Num*1000));
+            Decalitro.setText(String.valueOf(Num*100));
+            Hectolitro.setText(String.valueOf(Num*10));
+            Kilolitro.setText(String.valueOf(Num));
+            }
+            }
+            }
+            }
+            }
+            }
+    }//GEN-LAST:event_BtnTranformarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,8 +418,16 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
     private javax.swing.JButton BtnInformacion;
     private javax.swing.JButton BtnRegreso;
     private javax.swing.JButton BtnSalir;
-    private javax.swing.JTextField Num;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton BtnTranformar;
+    private javax.swing.JTextField Centilitro;
+    private javax.swing.JTextField Decalitro;
+    private javax.swing.JTextField Decilitro;
+    private javax.swing.JTextField Hectolitro;
+    private javax.swing.JTextField Kilolitro;
+    private javax.swing.JTextField Litro;
+    private javax.swing.JTextField Mililitro;
+    private javax.swing.JTextField Numero;
+    private javax.swing.JComboBox<String> Proceso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -345,12 +439,5 @@ public class UNIDADES_VOLUMEN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
